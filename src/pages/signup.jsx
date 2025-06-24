@@ -4,9 +4,10 @@ import Form from '../components/formfields'
 import { Listbox } from '@headlessui/react'
 import { ChevronUpDownIcon } from '@heroicons/react/20/solid'
 import { motion, useAnimation } from "framer-motion"
-
+import { useNavigate } from 'react-router-dom'
 
 function Signup() {
+  const navigate = useNavigate();
   const options = [
     { id: 1, name: 'India', avatar: 'https://cdn.pixabay.com/photo/2018/08/21/18/07/indian-flag-3621824_1280.png' },
     { id: 2, name: 'USA', avatar: 'https://via.placeholder.com/150' },
@@ -138,7 +139,7 @@ function Signup() {
           </div>
           <div className="flex justify-center items-center bg-gray-100 h-16 mt-0 cursor-pointer">
             <p className="text-gray-900 text-center mr-2 font-normal">Already have an account?</p>
-            <a href="/" className="text-blue-900 cursor-pointer">Sign in</a>
+          <a href="#" className="text-blue-900 cursor-pointer" onClick={() => navigate('/')}>Sign in</a>
           </div>
         </form>
 

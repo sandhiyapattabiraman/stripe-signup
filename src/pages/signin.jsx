@@ -2,9 +2,10 @@ import '../App.css'
 import Form from '../components/formfields'
 import { motion, useAnimation } from "framer-motion"
 import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function Signin() {
-
+    const navigate = useNavigate();
     const controls = useAnimation();
 
   useEffect(() => {
@@ -86,7 +87,7 @@ function Signin() {
                         <div>
                         <div className="flex justify-center items-center bg-gray-100 h-16 mt-0 cursor-pointer">
                             <p className="text-gray-900 text-center mr-1 font-normal">New to stripe?</p>
-                            <a href="/signup" className="text-blue-900 cursor-pointer">Create an account</a>
+                            <a href="#" className="text-blue-900 cursor-pointer" onClick={() => navigate('/signup')}>Create an account</a>
                         </div>
                         </div>
                     </form>
