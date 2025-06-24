@@ -73,7 +73,7 @@ function Signin() {
                         </div>
                         <div className='flex flex-col gap-2'>
                         <button className="w-full border-2 border-gray-300 rounded-md p-2 flex items-center justify-center gap-2 cursor-pointer">
-                            <img src="../src/assets/google.png" alt="Google" className="w-3 h-3" />
+                            <img src="./src/assets/google.png" alt="Google" className="w-3 h-3" />
                             <span>Sign in with Google</span>
                         </button>
                         <button className="w-full border-2 border-gray-300 rounded-md p-2 flex items-center justify-center gap-2 cursor-pointer">
