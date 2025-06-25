@@ -5,7 +5,7 @@ import { Listbox } from '@headlessui/react'
 import { ChevronUpDownIcon } from '@heroicons/react/20/solid'
 import { motion, useAnimation } from "framer-motion"
 import { useNavigate } from 'react-router-dom'
-
+import google from '../assets/google.png'
 function Signup() {
   const navigate = useNavigate();
   const options = [
@@ -132,7 +132,7 @@ function Signup() {
               <div className="border-t border-gray-300 flex-grow"></div>
             </div>
             <button className="w-full border-2 border-gray-300 rounded-md p-2 flex items-center justify-center gap-2 cursor-pointer">
-              <img src="./src/assets/google.png" alt="Google" className="w-5 h-5" />
+              <img src={google} alt="Google" className="w-5 h-5" />
               <span>Sign Up with Google</span>
             </button>
 

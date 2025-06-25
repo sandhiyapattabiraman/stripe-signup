@@ -3,6 +3,7 @@ import Form from '../components/formfields'
 import { motion, useAnimation } from "framer-motion"
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import google from '../assets/google.png'
 
 function Signin() {
     const navigate = useNavigate();
@@ -73,7 +74,7 @@ function Signin() {
                         </div>
                         <div className='flex flex-col gap-2'>
                         <button className="w-full border-2 border-gray-300 rounded-md p-2 flex items-center justify-center gap-2 cursor-pointer">
-                            <img src="./src/assets/google.png" alt="Google" className="w-3 h-3" />
+                            <img src={google} alt="Google" className="w-3 h-3" />
                             <span>Sign in with Google</span>
                         </button>
                         <button className="w-full border-2 border-gray-300 rounded-md p-2 flex items-center justify-center gap-2 cursor-pointer">
@@ -92,7 +93,7 @@ function Signin() {
                         </div>
                     </form>
 
-                    <div className='flex justify-center w-lg'>
+                    <div className='flex justify-center w-lg mt-5'>
                         <p className='text-sm text-gray-900 text-start'>
                         Bookmark this page and only use the bookmark to sign in to avoid phishing attempts. Phishing websites pretend to be Stripe to access your password.
                         </p>
