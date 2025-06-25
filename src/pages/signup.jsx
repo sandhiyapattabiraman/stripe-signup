@@ -6,6 +6,9 @@ import { ChevronUpDownIcon } from '@heroicons/react/20/solid'
 import { motion, useAnimation } from "framer-motion"
 import { useNavigate } from 'react-router-dom'
 import google from '../assets/google.png'
+import Button from '../components/button'
+
+
 function Signup() {
   const navigate = useNavigate();
   const options = [
@@ -212,16 +215,16 @@ function Signup() {
                 <span><p className='text-red-500 text-sm'>{submitted && errors.country}</p></span>
               </div>
             </Form>
-            <button type='submit' className='w-full border-2  rounded-md p-2 bg-blue-600 text-white cursor-pointer' >Create Account</button>
+            <Button type='submit' className='bg-blue-600 text-white border-none'>Create Account</Button>
             <div className="flex items-center gap-4">
               <div className="border-t border-gray-300 flex-grow"></div>
               <p className="text-gray-500 text-sm">OR</p>
               <div className="border-t border-gray-300 flex-grow"></div>
             </div>
-            <button className="w-full border-2 border-gray-300 rounded-md p-2 flex items-center justify-center gap-2 cursor-pointer">
+            <Button >
               <img src={google} alt="Google" className="w-5 h-5" />
-              <span>Sign Up with Google</span>
-            </button>
+              Sign Up with Google
+            </Button>
 
           </div>
           <div className="flex justify-center items-center bg-gray-100 h-16 mt-0 cursor-pointer">

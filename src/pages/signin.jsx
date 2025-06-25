@@ -4,6 +4,7 @@ import { motion, useAnimation } from "framer-motion"
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import google from '../assets/google.png'
+import Button from '../components/button'
 
 function Signin() {
     const navigate = useNavigate();
@@ -25,7 +26,7 @@ function Signin() {
             }
         });
     }, [controls]);
-    
+
     useEffect(() => {
         if (shake) {
             const timer = setTimeout(() => setShake(false), 500);
@@ -108,7 +109,7 @@ function Signin() {
                                 />
                                 <span><p className='text-red-500 text-sm'>{submitted && errors.email}</p></span>
                             </Form>
-                            <Form  error={submitted && errors.password}>
+                            <Form error={submitted && errors.password}>
                                 <div className='flex justify-between items-center'>
                                     <label htmlFor="password" className='text-gray-700 font-semibold'>Password</label>
                                     <a href="" className='text-blue-900 text-sm cursor-pointer font-semibold'>Forget your password?</a>
@@ -129,23 +130,23 @@ function Signin() {
                                     <span><p className='text-red-500 text-sm'>{submitted && errors.password}</p></span>
                                 </div>
                             </Form>
-                            <button type='submit' className='w-full border-2  rounded-md p-2 bg-blue-600 text-white cursor-pointer' >Signin</button>
+                            <Button type='submit' className='bg-blue-600 text-white border-none'>Signin</Button>
                             <div className="flex items-center gap-4">
                                 <div className="border-t border-gray-300 flex-grow"></div>
                                 <p className="text-gray-500 text-sm">OR</p>
                                 <div className="border-t border-gray-300 flex-grow"></div>
                             </div>
                             <div className='flex flex-col gap-2'>
-                                <button className="w-full border-2 border-gray-300 rounded-md p-2 flex items-center justify-center gap-2 cursor-pointer">
+                                <Button >
                                     <img src={google} alt="Google" className="w-3 h-3" />
-                                    <span>Sign in with Google</span>
-                                </button>
-                                <button className="w-full border-2 border-gray-300 rounded-md p-2 flex items-center justify-center gap-2 cursor-pointer">
-                                    <span>Sign in with passkey</span>
-                                </button>
-                                <button className="w-full border-2 border-gray-300 rounded-md p-2 flex items-center justify-center gap-2 cursor-pointer">
-                                    <span>Sign in with SSO</span>
-                                </button>
+                                    Sign in with Google
+                                </Button>
+                                <Button >
+                                    Sign in with passkey
+                                </Button>
+                                <Button >
+                                    Sign in with SSO
+                                </Button>
                             </div>
                         </div>
                         <div>
